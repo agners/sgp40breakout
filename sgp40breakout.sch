@@ -1,0 +1,269 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SPG40 breakout"
+Date "2020-10-01"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Author: Stefan Agner"
+$EndDescr
+$Comp
+L sgp40breakout:SGP40 U1
+U 1 1 5F750832
+P 3350 3350
+F 0 "U1" H 3100 3650 50  0000 C CNN
+F 1 "SGP40" H 3500 3050 50  0000 C CNN
+F 2 "" H 3350 3350 50  0001 C CNN
+F 3 "" H 3350 3350 50  0001 C CNN
+	1    3350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F750446
+P 3250 2500
+F 0 "R1" H 3000 2550 50  0000 L CNN
+F 1 "4.7Ω" H 3000 2450 50  0000 L CNN
+F 2 "" V 3180 2500 50  0001 C CNN
+F 3 "~" H 3250 2500 50  0001 C CNN
+	1    3250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F750ACA
+P 2150 3300
+F 0 "#PWR0101" H 2150 3050 50  0001 C CNN
+F 1 "GND" H 2155 3127 50  0000 C CNN
+F 2 "" H 2150 3300 50  0001 C CNN
+F 3 "" H 2150 3300 50  0001 C CNN
+	1    2150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F75944F
+P 2600 2700
+F 0 "C1" H 2715 2746 50  0000 L CNN
+F 1 "1µF" H 2715 2655 50  0000 L CNN
+F 2 "" H 2638 2550 50  0001 C CNN
+F 3 "~" H 2600 2700 50  0001 C CNN
+	1    2600 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5F75A1A2
+P 2600 2950
+F 0 "C2" H 2300 3000 50  0000 L CNN
+F 1 "1µF" H 2300 2900 50  0000 L CNN
+F 2 "" H 2638 2800 50  0001 C CNN
+F 3 "~" H 2600 2950 50  0001 C CNN
+	1    2600 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F75B3E5
+P 3350 3850
+F 0 "#PWR0102" H 3350 3600 50  0001 C CNN
+F 1 "GND" H 3355 3677 50  0000 C CNN
+F 2 "" H 3350 3850 50  0001 C CNN
+F 3 "" H 3350 3850 50  0001 C CNN
+	1    3350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5F75EFCE
+P 3350 2150
+F 0 "#PWR0103" H 3350 2000 50  0001 C CNN
+F 1 "VCC" H 3365 2323 50  0000 C CNN
+F 2 "" H 3350 2150 50  0001 C CNN
+F 3 "" H 3350 2150 50  0001 C CNN
+	1    3350 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5F7622A1
+P 5300 5500
+F 0 "J1" H 5272 5474 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 5272 5383 50  0000 R CNN
+F 2 "" H 5300 5500 50  0001 C CNN
+F 3 "~" H 5300 5500 50  0001 C CNN
+	1    5300 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5F76B180
+P 4700 5300
+F 0 "#PWR0104" H 4700 5150 50  0001 C CNN
+F 1 "VCC" H 4715 5473 50  0000 C CNN
+F 2 "" H 4700 5300 50  0001 C CNN
+F 3 "" H 4700 5300 50  0001 C CNN
+	1    4700 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F76B623
+P 4700 5600
+F 0 "#PWR0105" H 4700 5350 50  0001 C CNN
+F 1 "GND" H 4705 5427 50  0000 C CNN
+F 2 "" H 4700 5600 50  0001 C CNN
+F 3 "" H 4700 5600 50  0001 C CNN
+	1    4700 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5400 4700 5400
+Wire Wire Line
+	4700 5400 4700 5300
+Wire Wire Line
+	5100 5500 4700 5500
+Wire Wire Line
+	4700 5500 4700 5600
+Text GLabel 5100 5700 0    50   Input ~ 0
+SDA
+Text GLabel 5100 5600 0    50   Input ~ 0
+SCL
+Text GLabel 3700 3250 2    50   Input ~ 0
+SCL
+Text GLabel 3700 3350 2    50   Input ~ 0
+SDA
+$Comp
+L Sensor_Humidity_New:SHT35-DIS U2
+U 1 1 5F770C8C
+P 7300 3350
+F 0 "U2" H 7050 3600 50  0000 C CNN
+F 1 "SHT35-DIS" H 7550 3100 50  0000 C CNN
+F 2 "Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm" H 7300 3400 50  0001 C CNN
+F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" H 7300 3400 50  0001 C CNN
+	1    7300 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2150 3350 2250
+Wire Wire Line
+	3250 2400 3250 2350
+Wire Wire Line
+	3250 2250 3350 2250
+Connection ~ 3350 2250
+Wire Wire Line
+	3350 2250 3350 2950
+Wire Wire Line
+	3350 3850 3350 3700
+Connection ~ 3250 2350
+Wire Wire Line
+	3250 2350 3250 2250
+Wire Wire Line
+	3250 2650 3250 2700
+Wire Wire Line
+	2750 2700 3250 2700
+Connection ~ 3250 2700
+Wire Wire Line
+	3250 2700 3250 3000
+Wire Wire Line
+	2750 2950 3350 2950
+Connection ~ 3350 2950
+Wire Wire Line
+	3350 2950 3350 3000
+Wire Wire Line
+	2450 2950 2150 2950
+Wire Wire Line
+	2450 2700 2150 2700
+Wire Wire Line
+	2150 2700 2150 2950
+Connection ~ 2150 2950
+Wire Wire Line
+	2150 2950 2150 3300
+Text GLabel 7700 3350 2    50   Input ~ 0
+SCL
+Text GLabel 7700 3250 2    50   Input ~ 0
+SDA
+$Comp
+L power:VCC #PWR0106
+U 1 1 5F7B68D8
+P 7300 2150
+F 0 "#PWR0106" H 7300 2000 50  0001 C CNN
+F 1 "VCC" H 7315 2323 50  0000 C CNN
+F 2 "" H 7300 2150 50  0001 C CNN
+F 3 "" H 7300 2150 50  0001 C CNN
+	1    7300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5F7B7F66
+P 7300 3850
+F 0 "#PWR0107" H 7300 3600 50  0001 C CNN
+F 1 "GND" H 7305 3677 50  0000 C CNN
+F 2 "" H 7300 3850 50  0001 C CNN
+F 3 "" H 7300 3850 50  0001 C CNN
+	1    7300 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3850 7300 3650
+$Comp
+L Device:C C3
+U 1 1 5F7BA017
+P 6800 2850
+F 0 "C3" H 6915 2896 50  0000 L CNN
+F 1 "100nF" H 6915 2805 50  0000 L CNN
+F 2 "" H 6838 2700 50  0001 C CNN
+F 3 "~" H 6800 2850 50  0001 C CNN
+	1    6800 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5F7BA6FE
+P 6450 3000
+F 0 "#PWR0108" H 6450 2750 50  0001 C CNN
+F 1 "GND" H 6455 2827 50  0000 C CNN
+F 2 "" H 6450 3000 50  0001 C CNN
+F 3 "" H 6450 3000 50  0001 C CNN
+	1    6450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3000 6450 2850
+Wire Wire Line
+	6450 2850 6650 2850
+Wire Wire Line
+	6950 2850 7300 2850
+Wire Wire Line
+	7300 2850 7300 3050
+Wire Wire Line
+	7300 2850 7300 2150
+Connection ~ 7300 2850
+$Comp
+L power:GND #PWR0109
+U 1 1 5F7BEF05
+P 6750 3850
+F 0 "#PWR0109" H 6750 3600 50  0001 C CNN
+F 1 "GND" H 6755 3677 50  0000 C CNN
+F 2 "" H 6750 3850 50  0001 C CNN
+F 3 "" H 6750 3850 50  0001 C CNN
+	1    6750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3850 6750 3450
+Wire Wire Line
+	6750 3450 6900 3450
+Wire Wire Line
+	6750 3450 6750 3250
+Wire Wire Line
+	6750 3250 6900 3250
+Connection ~ 6750 3450
+$EndSCHEMATC

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name sgp40breakout)(type Legacy)(uri ${KIPRJMOD}/sgp40breakout.lib)(options "")(descr ""))
+)
