@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name sgp40breakout)(type KiCad)(uri ${KIPRJMOD}/sgp40breakout.pretty)(options "")(descr ""))
+)
