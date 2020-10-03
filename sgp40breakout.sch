@@ -122,9 +122,9 @@ Text GLabel 9250 3450 0    50   Input ~ 0
 SDA
 Text GLabel 9250 3350 0    50   Input ~ 0
 SCL
-Text GLabel 3450 3250 2    50   Input ~ 0
+Text GLabel 3550 3250 2    50   Input ~ 0
 SCL
-Text GLabel 3450 3350 2    50   Input ~ 0
+Text GLabel 3550 3350 2    50   Input ~ 0
 SDA
 $Comp
 L sgp40breakout:SHT35-DIS-Sensor_Humidity_New U2
@@ -400,4 +400,8 @@ Wire Wire Line
 	4600 2900 4600 2800
 Wire Wire Line
 	4300 3300 4300 3250
+Wire Wire Line
+	3450 3350 3550 3350
+Wire Wire Line
+	3550 3250 3450 3250
 $EndSCHEMATC
