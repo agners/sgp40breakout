@@ -14,17 +14,6 @@ Comment3 "License: BSD 2-Clause"
 Comment4 "Author: Stefan Agner"
 $EndDescr
 $Comp
-L sgp40breakout:SGP40 U1
-U 1 1 5F750832
-P 3100 3350
-F 0 "U1" H 2850 3650 50  0000 C CNN
-F 1 "SGP40" H 3250 3050 50  0000 C CNN
-F 2 "sgp40breakout:Sensirion_DFN-6-1EP_2.44x2.44mm_P0.8mm" H 3100 3350 50  0001 C CNN
-F 3 "" H 3100 3350 50  0001 C CNN
-	1    3100 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5F750446
 P 3000 2500
@@ -71,12 +60,12 @@ $EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5F75B3E5
-P 3100 3850
-F 0 "#PWR0102" H 3100 3600 50  0001 C CNN
-F 1 "GND" H 3105 3677 50  0000 C CNN
-F 2 "" H 3100 3850 50  0001 C CNN
-F 3 "" H 3100 3850 50  0001 C CNN
-	1    3100 3850
+P 3100 3900
+F 0 "#PWR0102" H 3100 3650 50  0001 C CNN
+F 1 "GND" H 3105 3727 50  0000 C CNN
+F 2 "" H 3100 3900 50  0001 C CNN
+F 3 "" H 3100 3900 50  0001 C CNN
+	1    3100 3900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -122,9 +111,9 @@ Text GLabel 9250 3450 0    50   Input ~ 0
 SDA
 Text GLabel 9250 3350 0    50   Input ~ 0
 SCL
-Text GLabel 3550 3250 2    50   Input ~ 0
+Text GLabel 2550 3350 0    50   Input ~ 0
 SCL
-Text GLabel 3550 3350 2    50   Input ~ 0
+Text GLabel 2550 3450 0    50   Input ~ 0
 SDA
 $Comp
 L sgp40breakout:SHT35-DIS-Sensor_Humidity_New U2
@@ -145,8 +134,6 @@ Connection ~ 3100 2250
 Wire Wire Line
 	3100 2250 3100 2950
 Wire Wire Line
-	3100 3850 3100 3700
-Wire Wire Line
 	3000 2350 3000 2250
 Wire Wire Line
 	3000 2650 3000 2700
@@ -154,12 +141,8 @@ Wire Wire Line
 	2500 2700 3000 2700
 Connection ~ 3000 2700
 Wire Wire Line
-	3000 2700 3000 3000
-Wire Wire Line
 	2500 2950 3100 2950
 Connection ~ 3100 2950
-Wire Wire Line
-	3100 2950 3100 3000
 Wire Wire Line
 	2200 2950 1900 2950
 Wire Wire Line
@@ -349,17 +332,6 @@ F 3 "~" H 8950 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0111
-U 1 1 5F7F9028
-P 2750 3850
-F 0 "#PWR0111" H 2750 3600 50  0001 C CNN
-F 1 "GND" H 2755 3677 50  0000 C CNN
-F 2 "" H 2750 3850 50  0001 C CNN
-F 3 "" H 2750 3850 50  0001 C CNN
-	1    2750 3850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:TestPoint TP2
 U 1 1 5F806569
 P 6400 3450
@@ -388,11 +360,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 3300 5850 3300
 Wire Wire Line
-	2750 3400 2750 3500
-Connection ~ 2750 3500
-Wire Wire Line
-	2750 3500 2750 3850
-Wire Wire Line
 	5850 3400 6400 3400
 Wire Wire Line
 	6400 3400 6400 3450
@@ -400,8 +367,37 @@ Wire Wire Line
 	4600 2900 4600 2800
 Wire Wire Line
 	4300 3300 4300 3250
+$Comp
+L sgp40breakout:SGP40 U1
+U 1 1 5F750832
+P 3000 3450
+F 0 "U1" H 2800 3750 50  0000 C CNN
+F 1 "SGP40" H 3250 3150 50  0000 C CNN
+F 2 "sgp40breakout:Sensirion_DFN-6-1EP_2.44x2.44mm_P0.8mm" H 3000 3450 50  0001 C CNN
+F 3 "" H 3000 3450 50  0001 C CNN
+	1    3000 3450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3450 3350 3550 3350
+	3100 3800 3100 3850
 Wire Wire Line
-	3550 3250 3450 3250
+	3000 3800 3000 3850
+Wire Wire Line
+	3000 3850 3100 3850
+Connection ~ 3100 3850
+Wire Wire Line
+	3100 3850 3100 3900
+Wire Wire Line
+	2900 3800 2900 3850
+Wire Wire Line
+	2900 3850 3000 3850
+Connection ~ 3000 3850
+Wire Wire Line
+	2550 3350 2650 3350
+Wire Wire Line
+	2650 3450 2550 3450
+Wire Wire Line
+	3000 2700 3000 3100
+Wire Wire Line
+	3100 2950 3100 3100
 $EndSCHEMATC
